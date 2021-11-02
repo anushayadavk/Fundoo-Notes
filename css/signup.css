@@ -1,0 +1,235 @@
+.h1{
+    width: 100%;
+    /* position: absolute; */
+    height: 120%;
+}
+
+.f1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #d5d2d2;
+    border-radius: 10px;
+    width: 800px;
+    padding: 25px;
+}
+
+.head{
+    margin-left: 3%;
+}
+
+.h5{
+    position: relative;
+    margin: -20px 0 0 13px;
+    font-size: 23px;
+    font-family: jost;
+    letter-spacing: 1px;
+}
+
+.input{
+    /* border: 1px solid #d5d2d2; */
+    border-radius: 5px;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 15px;
+    outline: none;
+    /* border: 1px solid grey;
+    margin:20px;
+    width:200px; */
+}
+
+/* #first_name:focus{
+    border: 3px solid blue;
+}
+#last_name:focus{
+    border: 3px solid blue;
+}
+#email:focus{
+    border: 3px solid blue;
+}
+#Password:focus{
+    border: 3px solid blue;
+}
+#Confirm:focus{
+    border: 3px solid blue;
+}
+#c1:focus{
+    background-color:solid blue;
+} */
+
+.name{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.n1{
+    display: flex;
+    flex-direction: row;
+}
+
+.input[type="name"]{
+    display: block;
+    margin: 30px 0 0 10px;
+}
+
+.input[type="email"]{
+    display: block;
+    margin: 10px 0 0 10px;
+}
+
+#first_name{
+    width:200px;
+    border: 1px solid gray;
+    margin:20px;
+    /* margin-left: 1%; */
+}
+
+#last_name{
+    width: 200px;
+    border: 1px solid gray;
+    margin:20px;
+}
+.user-name{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+#mail{
+    margin: -20px 0 0 15px;
+    margin-left: 4%;
+}
+#email{
+    width: 445px;
+    border: 1px solid gray;
+    margin:20px;
+}
+.line1{
+    font-size: 14px;
+    margin: -10px 0 0 15px;
+    margin-left: 4%;
+}
+
+.line2{
+    font-size: 18px;
+    margin: 30px 0 20px 25px;
+    color: solid blue;
+}
+.line3{
+    font-size: 14px;
+    margin: -5px 0 0 15px;
+    width: 400px;
+    margin-left: 4%;
+}
+
+.pass{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 3%; */
+    background-color: white;
+}
+.pass1{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 3%; */
+    background-color: white;
+}
+.p2{
+    display: flex;
+    flex-direction: row;
+}
+
+#Password{
+    width: 200px;
+    border: 1px solid gray;
+    margin:20px;
+}
+#Confirm{
+    width: 200px;
+    border: 1px solid gray;
+    margin:20px;
+}
+
+#l1{
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+.line4{
+   display: flex;
+   flex-direction: row;
+   margin-left: 4%;
+   justify-content: flex-start;
+   margin-top: 5%;
+}
+
+ input[type="submit"]{
+    background: blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    /* font-size: 15px; */
+    margin-left: 280px;
+}
+
+
+
+.side-image{
+    display: inline-block;
+    position: relative;
+    top: 90px;
+    left: 50%;
+    transform: translate(50%,50%);
+}
+
+.side-logo{
+    width: 250px;
+    display: block;
+}
+
+.line5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+/* error-output {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+  } */
+
+  .helper-text{
+      /* position: relative;
+      border: 5px solid green;
+      top: 30%; */
+     color: red;
+     display: none;
+     margin-left: 12%;
+  }
+
+  @media only screen and (max-width:1366px) and (min-width:768px){
+
+    .side-image{
+        display: none;
+    }
+   
+    .f1{
+        width: 550px;
+        
+    }
+    
+  }
+
+  @media only screen and (max-width:736px) and (min-width:414px){
+    .side-image{
+        display: none;
+    }
+
+    .f1{
+        width: 400px;
+        border: none;
+
+    }
+  }
