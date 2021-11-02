@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your Google Account</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+    integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+    crossorigin="anonymous"> </script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link rel="stylesheet" href="../css/signup.css">
+     <script src="../js/signup.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="h1">
+        <form class="f1">
+            <div class="head">
+                <img class="logo" src="../image/Google-Logo.png" width="100px">
+                <h5>Create Your Google Account</h5>
+            </div>
+           
+            <div class="n1">
+                <div class="name">
+                  <div><input placeholder="  First name" id="first_name" type="text" class="validate"></div>
+                  <div><span class="helper-text" data-error="wrong">First name invalid </span></div>
+                </div>
+                
+                <div class="name1">
+                    <div><input placeholder="  Last name" id="last_name" type="text" class="validate"></div>
+                    <div><span class="helper-text" id="helper1" data-error="wrong" >Last name invalid </span></div>
+                </div>
+            </div>
+
+
+            <div class="user-name">
+                <input id="email" type="email" class="validate" placeholder="  User name                                                      @gmail.com">
+                <span class="helper-text" id="mail">email invalid </span>
+            </div>
+        
+            <div class="line1">You can use letters, numbers and periods</div><br>
+            <a href="" class="line2">Use my current email address instead</a>
+            
+            <div class="p2">
+                <div class="pass">
+                 <div><input id="Password" type="password" class="validate" placeholder="  Password"></div>
+                <div><span class="helper-text" id="pass" data-error="wrong" >password incorrect</span></div>
+                </div>
+                <div class="pass1">
+                  <div><input id="Confirm" type="password" class="validate" placeholder="  Confirm"></div>
+                <div><span class="helper-text" id="conf1" data-error="wrong" >password incorrect</span></div>
+                </div>
+            </div>    
+                
+                <div class="line3">Use 8 more characters with a mix of letters, numbers & symbols</div>
+                <label id="l1">
+                    <input id="c1" type="checkbox" />
+                    <span>Show Password</span>
+                </label>
+            
+
+            <div class="line4">
+                <a class="qw">Sign in instead</a>
+                <input type="submit" name="" class="n1" id="button" value="Next">
+            </div>
+        </form>
+        <div class="side-image">
+        <div ><img src="../image/form_image.svg" class="side-logo"></div>
+        <div class="line5"> One account. All of Google</div>
+        <div class="line5"> working for you. </div>
+       </div>
+    </div>
+</body>
+</html>
