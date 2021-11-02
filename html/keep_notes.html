@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Keep</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+    integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+    crossorigin="anonymous"> </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/keep_notes.css">
+  <script src="../js/keep_notes.js"></script>
+  <script src="../js/model.js"></script>
+  <!-- <script src="../js/change_colour.js"></script> -->
+  <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+  
+</head>
+
+<body>
+  <div class="flex">
+  <header class="hh1">
+    <div class="h1">
+      <div class="part1">
+        <i class="material-icons" id="m1">dehaze</i>
+        <img src="../image/keep_img.png" class="keep-img" width="50px" height="50px">
+        <!-- <div class="keep-txt">Keep</div> -->
+        <h2 class="k1">Keep</h2>
+      </div>
+      <div class="part2">
+        <i class="material-icons" id="m2">search</i>
+        <input class="searchBar" type="text" name="search" placeholder="Search">
+      </div>
+      <div class="part3">
+        <i class="material-icons" id="m3">refresh</i>
+        <i class="material-icons" id="m3">view_agenda</i>
+        <i class="material-icons" id="m3">settings</i>
+      </div>
+
+      <div class="part4">
+        <i class="material-icons" id="m4">apps</i>
+        <i class="material-icons" id="m4">account_circle</i>
+        <!-- <div class="a2"><img src="../image/ak.jpg" alt=""></div> -->
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="wrapper">
+    <!-- <div class="sidebar">
+        <ul>
+            <li><a class=aa1 id="a1" href="#"><i class="material-icons">lightbulb_outline</i>Notes</a></li>
+            <li><a class=aa1 id="a1" href="#"><i class="material-icons">notifications_none</i>Reminders</a></li> 
+            <li><a class=aa1 id="a1" href="#"><i class="material-icons">create</i>Edit labels</a></li>
+            <li><a class=aa1 id="a1" href="#"><i class="material-icons">archive</i>Archive</a></li>
+            <li><a class=aa1 id="a1" href="#"><i class="material-icons">delete</i>Thrash</a></li> 
+        </ul> 
+    </div> -->
+    <div class="sidebar close">
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <div id="bulb"><i class="material-icons">lightbulb_outline</i></div>
+              <span class="link_name">Notes</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <div id="bulb">
+              <li><a class="link_name" href="#">Notes</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="material-icons">notifications_none</i>
+              <span class="link_name">Reminders</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Reaminders</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="material-icons">create</i>
+            <span class="link_name">Edit </span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Edit </a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <div id="arch1"><i class="material-icons">archive</i></div>
+            <span class="link_name">Archive</span>
+          </a>
+          <ul class="sub-menu blank">
+            <div id="arch1">
+              <li><a class="link_name" href="#">Archive</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <div id="thrash2"><i class="material-icons">delete</i></div>
+            <span class="link_name">Thrash</span>
+          </a>
+          <ul class="sub-menu blank">
+            <div>
+              <li><a class="link_name" href="#" id="thrash2">Thrash</a></li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="take-note1" id="i1">
+      <div class="ll1">Take a note...</div>
+      <div class="l2">
+        <i class="material-icons" id="m5">check_box</i>
+        <i class="material-icons" id="m5">brush</i>
+        <i class="material-icons" id="m5">image</i>
+      </div>
+    </div>
+
+    <form class="take-note2" id="i2">
+      <input type="text" name="title" class="sub-note2" id="title2" placeholder="Title">
+      <p><textarea class="content" id="title-notes" placeholder="Take a note..."></textarea></p>
+      <div class="o11" id="o1"></div>
+      <div class="class1">
+        <!-- <div class="class2"id="class2"> -->
+        <i class="material-icons" id="rr1">notifications</i>
+        <div><i class="material-icons" id="cc7">group_add</i></div>
+        <!-- <div ><i class="material-icons" id="color-popup">color_lens</i></div> -->
+        <div class="popup" id="color-popup"><i class="material-icons">color_lens</i>
+          <span class="popuptext" id="myPopup"></span>
+        </div>
+        <i class="material-icons">image</i>
+        <i class="material-icons" id="archive">archive</i>
+        <i class="material-icons" id="Thrash1">delete</i>
+        <i class="material-icons">more_vert</i>
+        <!-- </div> -->
+        <button class="b1" id="button">Close</button>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="collabrator" id="collab">
+    <div class="c0">Collaborators</div>
+    <div class="c1">
+      <div class="c2">
+        <div><i class="material-icons" id="cc1">account_circle</i></div>
+        <div class="c3">
+          <div class="c31">Anusha Yadav(Owner)</div>
+          <div class="c32">anukk6000@gmail.com</div>
+        </div>
+      </div>
+      <!-- <div class="other_owners" id="otherowners"> -->
+        <!-- <div><i class="material-icons" id="cc3">account_circle</i></div> -->
+        <div id="o2" class="oo22"></div>
+      <!-- </div> -->
+      <div class="c4">
+        <div id="q11"><i class="material-icons">group_add</i></div>
+        <div class="c5" id="colb"><input type="text" name="title" class="sub-note3" id="title3" autocomplete="off"
+            placeholder="person or email to share with" >
+          <span class="popuptext1" id="myPopup1"></span>
+        </div>
+      </div>
+      <div class="boxEmails" id="boxx"></div>
+    </div>
+
+    <div class="c6">
+      <div><button class="b4" id="button4">Cancel</button> </div>
+      <div><button class="b5" id="button5">Save</button> </div>
+    </div>
+  </div>
+
+  <div class="reminder" id="reminder_1">
+    <div class="R5">
+      <div class="R1">Pick Date & Time</div>
+      <div class="R2"><input type="date" class="datepicker"  id="date1"></div>
+      <!-- <div class="R2"><input type="text"  id="date1"></div> -->
+      <!-- <div class="R3"><input type="time" class="timepicker" id="time1"></div> -->
+      <div class="R3"><input type="text" name="time" id="time1"></div>
+      <div class="R10">
+      <div class="R4"><button class="b5" id="button6">Save</button></div>
+      <div class="R9"><button class="b9" id="button9">Cancel</button></div>
+    </div>
+      <!-- <form><input class="form-control" type="datetime-local" placeholder="Select DateTime"> </form> -->
+      
+    </div>
+  </div>
+
+
+  <div>
+    <div class="Flex_container" id="flex-container"></div>
+  </div>
+
+  <div class="modal-container" id="modal-container1">
+    <div class="modal">
+      <div class="z1">pin your important notes to the top</div>
+      <div class="take" id="ii2">
+        <div><input type="text" name="title" class="sub-note2" id="title33" placeholder="Title"></div>
+        <div><textarea class="content" id="ii3" placeholder="Note"></textarea></div>
+        <div class="class2">
+
+          <div><i class="material-icons">notifications</i></div>
+          <div><i class="material-icons">group_add</i></div>
+          <div><i class="material-icons">color_lens</i></div>
+          <div><i class="material-icons">image</i></div>
+          <div><i class="material-icons" id="archive">archive</i></div>
+          <div><i class="material-icons">delete</i></div>
+          <div><i class="material-icons">more_vert</i></div>
+
+          <button class="b2" >Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  
+</body>
+
+</html>
