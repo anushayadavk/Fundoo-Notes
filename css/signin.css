@@ -1,0 +1,109 @@
+.h1{
+    width: 100%;
+    /* position: absolute; */
+    height: 100%;
+    
+}
+
+.f1{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #d5d2d2;
+    border-radius: 10px;
+    width: 500px;
+    padding: 25px;
+    height: 500px;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-name{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email{
+    width: 300px;
+    border: 1px solid gray;
+    margin:20px;
+}
+.input[type="email"]{
+    display: block;
+    margin: 10px 0 0 10px;
+}
+#mail{
+    margin: -10px 0 0 5px;
+    /* margin-left: 4%; */
+}
+
+.pass{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 3%; */
+    background-color: white;
+    align-items: center;
+}
+#Password{
+    width: 300px;
+    border: 1px solid gray;
+    margin:20px;
+}
+
+.helper-text{
+   color: red;
+   display: none;
+   /* margin-left: 12%; */
+}
+
+#l1{
+    margin-left: 16%; 
+    /* margin-top: 1%;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.line4{
+    display: flex;
+    flex-direction: row;
+    margin-left: 16%;
+    justify-content: flex-start;
+    margin-top: 5%;
+ }
+
+ input[type="submit"]{
+    background: blue;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    /* font-size: 15px; */
+    /* margin-left: 280px; */
+}
+
+@media only screen and (max-width:1024px) and (min-width:768px){
+    .f1{
+        /* border: none; */
+        margin-top: -30%;
+        width: 50%;
+        height: 44%;
+    }
+}
+
+@media only screen and (max-width:430px) and (min-width:320px){
+    .f1{
+        border: none;
+    }
+}
+@media only screen and (min-width: 250px) and (max-width: 340px) {
+    .f1{
+        border: none;
+    }
+}
